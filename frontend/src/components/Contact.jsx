@@ -18,18 +18,20 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('Form submitted', formData);
+  
     try {
-      const response = await axios.post('http://localhost:5000/contact', formData);
-      alert(response.data.message);
+      const response = await axios.post(`${import.meta.env.VITE_BACKEND_LINK}/contact`, formData);
+      alert(response.data.message || 'Form submitted successfully!');
       setFormData({ name: '', email: '', phone: '', message: '' });
     } catch (error) {
       alert('Failed to submit the form');
       console.error('Error:', error.response ? error.response.data : error.message);
     }
   };
+  
 
   return (
     <section className="contact" id="contact">
@@ -61,7 +63,7 @@ const Contact = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="number">Phone Number</label>
+            <label htmlFor="phone">Phone Number</label>
             <input
               type="tel"
               id="phone"
