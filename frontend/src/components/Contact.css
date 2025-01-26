@@ -1,29 +1,33 @@
 /* Contact Form Dark Mode Styling */
 #contact {
-  width: 100% !important;
-  height: 20rem !important;
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto;
   padding: 0;
-  margin: 3rem 20%; 
 }
 
 .contact-container {
-  width: 60% !important; 
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.getlable{
-  font-size: 5rem;
-  margin-left: 30rem;
+.getlable {
+  font-size: 3rem; /* Increased font size for header */
+  text-align: center;
+  margin: 1rem 0; /* Adjusted margins for better spacing */
 }
 
 .contact-form {
-  background-color: #1a1a1a; /* Dark background */
-  color: #fff; /* Light text color */
+  background-color: #1a1a1a;
+  color: #fff;
   padding: 20px;
   border-radius: 10px;
-  width: 100% !important;
-  height: 80vh !important;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin: 0 auto; /* Default alignment for larger screens */
 }
 
 .contact-form .form-group {
@@ -37,36 +41,82 @@
   margin-bottom: 5px;
 }
 
-.contact-form input, 
+.contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #444;
   border-radius: 5px;
-  background-color: #333; /* Dark background for inputs */
-  color: #fff; /* Light text color */
+  background-color: #333;
+  color: #fff;
   font-size: 14px;
 }
 
-.contact-form input:focus, 
+.contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #ff6f61; /* Highlight border color on focus */
+  border-color: #ff6f61;
 }
 
 .contact-form button {
-  background-color: #ff6f61; /* Button background */
-  color: #fff; /* Text color */
+  background-color: #ff6f61;
+  color: #fff;
   padding: 12px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  width: 50%;
+  width: 100%;
+  max-width: 200px;
+  margin: 20px auto;
+  display: block;
   transition: background-color 0.3s ease;
-  margin: 0 25%;
 }
 
 .contact-form button:hover {
-  background-color: #e75f53; /* Darker shade on hover */
+  background-color: #e75f53;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .getlable {
+    font-size: 2.5rem; /* Slightly smaller header for tablets */
+  }
+
+  .contact-form {
+    padding: 15px;
+    margin: 1rem 5%; /* Added margins for better appearance */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 13px;
+  }
+
+  .contact-form button {
+    font-size: 14px;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .getlable {
+    font-size: 2.5rem; /* Adjusted header size for mobiles */
+  }
+
+  .contact-form {
+    padding: 10px;
+    margin: 1rem 5% 5% 1rem; /* Narrower margins for smaller screens */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 12px;
+  }
+
+  .contact-form button {
+    padding: 10px 15px;
+    font-size: 12px;
+    max-width: 100%;
+  }
 }
