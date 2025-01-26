@@ -75,6 +75,7 @@ section{
 }
 .home-img img
 {
+    margin-left: 5rem;
     width: 35vw;
     animation: floatImage 4s ease-in-out infinite;
 }
